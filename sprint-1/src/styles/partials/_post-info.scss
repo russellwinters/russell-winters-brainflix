@@ -51,7 +51,7 @@
 @include medium {
   .post {
     width: calc(100vw - 48px);
-
+    margin-bottom: 64px;
     &-container {
       padding-top: 48px;
       &__heading {
@@ -85,7 +85,6 @@
       width: 70vw;
       @include paragraphs;
       margin-top: 40px;
-      margin-bottom: 64px;
     }
   }
 }
@@ -95,7 +94,6 @@
     width: 49.44vw;
     margin: unset;
     margin-left: 180px;
-    overflow-x: scroll;
 
     &-container {
       &__info {

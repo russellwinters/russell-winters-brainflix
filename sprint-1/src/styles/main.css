@@ -289,6 +289,7 @@ body {
 @media only screen and (min-width: 768px) {
   .post {
     width: calc(100vw - 48px);
+    margin-bottom: 64px;
   }
   .post-container {
     padding-top: 48px;
@@ -331,7 +332,6 @@ body {
     line-height: 22px;
     font-family: "avenir";
     margin-top: 40px;
-    margin-bottom: 64px;
   }
 }
 
@@ -340,7 +340,6 @@ body {
     width: 49.44vw;
     margin: unset;
     margin-left: 180px;
-    overflow-x: scroll;
   }
   .post-container__info-stats {
     margin-right: 32px;
@@ -441,5 +440,56 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments {
+    width: calc(100vw-48px);
+  }
+  .comments-form__heading {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir-demi-bold";
+  }
+  .comments-form__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .comments-form__container-subdiv {
+    margin-right: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .comments-form__container-subdiv-input {
+    width: 57.29vw;
+    margin-bottom: unset;
+  }
+  .comments-form__container-subdiv-input--content {
+    height: 48px;
+  }
+  .comments-form__container-subdiv-button {
+    width: 20.83vw;
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .comments {
+    width: 49.44vw;
+    margin: unset;
+    margin-left: 180px;
+  }
+  .comments-form__container {
+    width: 100%;
+  }
+  .comments-form__container-subdiv {
+    width: calc(100% - 96px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
