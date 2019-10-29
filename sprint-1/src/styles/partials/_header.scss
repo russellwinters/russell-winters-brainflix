@@ -34,6 +34,10 @@
         border: none;
         height: 46px;
       }
+
+      &-input::placeholder {
+        color: $black;
+      }
     }
     &--nav {
       display: flex;
@@ -75,22 +79,29 @@
 
     &__logo {
       width: 25vw;
-      margin-right: 15vw;
     }
 
-    &__search-container {
-      width: 20%;
+    &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 55vw;
 
-      &--input {
-        width: 70%;
+      &--search-container {
+        width: 55%;
       }
-    }
 
-    &__nav {
-      width: 25%;
-      margin-left: 24px;
-      margin-bottom: unset;
-      margin-top: unset;
+      &--nav {
+        width: 45%;
+        padding-left: 24px;
+        margin-bottom: unset;
+        margin-top: unset;
+
+        &-button {
+          width: calc(100% - 64px);
+        }
+      }
     }
   }
 }
@@ -99,8 +110,12 @@
   .header {
     width: calc(100vw - 360px);
 
-    &__nav {
-      width: 15%;
+    &__logo {
+      width: 10vw;
+    }
+
+    &__content {
+      width: 35vw;
     }
   }
 }
