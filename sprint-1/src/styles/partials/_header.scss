@@ -1,3 +1,6 @@
+//Going to have to re-structure the search container and the navbar.
+// Both of the above must be in the same div so that they can flex together on bigger sizes.
+
 .header {
   width: 100vw;
   display: flex;
@@ -55,6 +58,48 @@
     &--headshot {
       width: 48px;
       border-radius: 48px;
+    }
+  }
+}
+
+@include medium {
+  .header {
+    width: calc(100vw - 48px);
+    height: 80px;
+    margin: $center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      width: 25vw;
+      margin-right: 15vw;
+    }
+
+    &__search-container {
+      width: 20%;
+
+      &--input {
+        width: 70%;
+      }
+    }
+
+    &__nav {
+      width: 25%;
+      margin-left: 24px;
+      margin-bottom: unset;
+      margin-top: unset;
+    }
+  }
+}
+
+@include large {
+  .header {
+    width: calc(100vw - 360px);
+
+    &__nav {
+      width: 15%;
     }
   }
 }

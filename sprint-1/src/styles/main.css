@@ -109,4 +109,50 @@ body {
   width: 48px;
   border-radius: 48px;
 }
+
+@media only screen and (min-width: 768px) {
+  .header {
+    width: calc(100vw - 48px);
+    height: 80px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__logo {
+    width: 25vw;
+    margin-right: 15vw;
+  }
+  .header__search-container {
+    width: 20%;
+  }
+  .header__search-container--input {
+    width: 70%;
+  }
+  .header__nav {
+    width: 25%;
+    margin-left: 24px;
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    width: calc(100vw - 360px);
+  }
+  .header__nav {
+    width: 15%;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,7 @@ body {
   box-sizing: inherit;
 }
 
+@import "./partials/breakpoints";
 @import "./partials/variables";
 @import "./partials/fonts";
 @import "./partials/header";
