@@ -189,4 +189,40 @@ body {
     width: 35vw;
   }
 }
+
+.video-container {
+  width: 100vw;
+}
+
+.video-container__content {
+  width: 100vw;
+  min-height: 183px;
+}
+
+@media only screen and (min-width: 768px) {
+  .video-container {
+    width: 100vw;
+    height: 400px;
+    background-color: #323232;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .video-container__content {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .video-container {
+    height: 540px;
+  }
+  .video-container__content {
+    width: 944px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
