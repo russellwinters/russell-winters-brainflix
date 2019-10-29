@@ -225,4 +225,128 @@ body {
     width: 944px;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+}
+
+.post-container {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.post-container__heading {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "avenir-bold";
+  margin-bottom: 16px;
+}
+
+.post-container__info-stamps {
+  margin-bottom: 32px;
+}
+
+.post-container__info-stamps-creator {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir-demi-bold";
+}
+
+.post-container__info-stamps-date {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+  margin-left: 8px;
+}
+
+.post-container__info-stats {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+}
+
+.post-container__info-stats-likes {
+  margin-left: 24px;
+}
+
+.post-description {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+}
+
+@media only screen and (min-width: 768px) {
+  .post {
+    width: calc(100vw - 48px);
+  }
+  .post-container {
+    padding-top: 48px;
+  }
+  .post-container__heading {
+    font-size: 36px;
+    line-height: 44px;
+    font-family: "avenir-bold";
+    margin-bottom: 24px;
+  }
+  .post-container__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .post-container__info-stamps {
+    margin-bottom: unset;
+  }
+  .post-container__info-stamps-creator {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir-demi-bold";
+  }
+  .post-container__info-stamps-date {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "avenir";
+  }
+  .post-container__info-stats {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "avenir";
+  }
+  .post-description {
+    width: 70vw;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "avenir";
+    margin-top: 40px;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .post {
+    width: 49.44vw;
+    margin: unset;
+    margin-left: 180px;
+    overflow-x: scroll;
+  }
+  .post-container__info-stats {
+    margin-right: 32px;
+  }
+  .post-description {
+    width: 36.67vw;
+  }
+}
 /*# sourceMappingURL=main.css.map */
