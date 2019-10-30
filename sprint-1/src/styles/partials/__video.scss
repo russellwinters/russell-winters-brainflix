@@ -11,7 +11,7 @@
 
 @include medium {
   .video-container {
-    width: 100vw;
+    width: 100%; // Setting width to 100vw made it scroll horizontally due to the overlap with vertical scroll bar.
     height: 400px;
     background-color: $black;
     display: flex;

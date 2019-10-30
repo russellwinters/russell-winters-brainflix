@@ -1,7 +1,33 @@
 import React from "react";
 import Headshot from "../assets/images/Mohan-muruge.jpg";
 
-export default function CommentSection() {
+export default function CommentSection(props) {
+  const comments = props.commentData.map((obj, index) => {
+    return (
+      <div key={index} className="comments__posts-container">
+        <div className="comments__posts-container-image">
+          <img
+            className="comments__posts-container-image-content"
+            src={Headshot}
+          />
+        </div>
+        <div className="comments__posts-container-form">
+          <div className="comments__posts-container-form--id">
+            <span className="comments__posts-container-form--id-namestamp">
+              {obj.name}
+            </span>
+            <span className="comments__posts-container-form--id-timestamp">
+              {obj.timestamp}
+            </span>
+          </div>
+          <div className="comments__posts-container-form--output">
+            {obj.comment}
+          </div>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <section className="comments">
       <div className="comments-form">
@@ -27,6 +53,7 @@ export default function CommentSection() {
           </div>
         </div>
       </div>
+      <div className="comments__posts">{comments}</div>
     </section>
   );
 }
