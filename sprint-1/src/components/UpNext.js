@@ -5,7 +5,7 @@ export default function UpNext(props) {
   return (
     <div>
       <div className="image-container">
-        <img src={props.image} />
+        <img src={props.img} />
       </div>
       <div className="info-container">
         <span className="info-container__title">{props.title}</span>

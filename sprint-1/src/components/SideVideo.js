@@ -5,7 +5,7 @@ const SideVideo = [
     id: "1",
     title: "Become a Travel Pro In One Easy Lesson",
     channel: "Todd Welch",
-    image: {ImageOne}
+    image: ImageOne
   },
   {
     id: "2",
