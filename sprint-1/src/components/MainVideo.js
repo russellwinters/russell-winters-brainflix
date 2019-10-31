@@ -23,7 +23,7 @@ const MainVideo = {
         "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He's so talented! I wish I can ride like him one day so I can really enjoy myself!"
     },
     {
-      name: "THeodore Duncan",
+      name: "Theodore Duncan",
       timestamp: "11/15/2018",
       comment:
         "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see hi I feel instantly happy! He's definitely my favourite ever!"

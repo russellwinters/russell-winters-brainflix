@@ -4,17 +4,19 @@ import Video from "./components/Video";
 import VideoInfo from "./components/VideoInfo";
 import CommentSection from "./components/CommentSection";
 import MainVideo from "./components/MainVideo";
-import SideVideo from "./components/SideVideo";
-import Aside from "./components/Aside";
+// import SideVideo from "./components/SideVideo";
+// import Aside from "./components/Aside";
 
 function App() {
   return (
     <div>
       <Header />
       <Video />
-      <VideoInfo />
-      <CommentSection CommentData={MainVideo} />
-      <Aside VideoData={SideVideo} />
+      <div className="page-content">
+        <VideoInfo />
+        <CommentSection CommentData={MainVideo} />
+        {/* <Aside VideoData={SideVideo} /> */}
+      </div>
     </div>
   );
 }

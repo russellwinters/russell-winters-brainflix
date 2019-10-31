@@ -5,18 +5,24 @@ import Headshot from "../assets/images/Mohan-muruge.jpg";
 
 export default function CommentBuilder(props) {
   return (
-    <div>
-      <div className="img-container">
-        <img src={Headshot} alt="Nothing" />
+    <div className="builder">
+      <div className="builder__img-container">
+        <img
+          className="builder__img-container--content"
+          src={Headshot}
+          alt="Nothing"
+        />
       </div>
-      <div className="comment-display">
-        <div className="comment-display__stamps">
-          <span className="comment-display__stamps-name">{props.name}</span>
-          <span className="comment-display__stamps-time">
+      <div className="builder__comment-display">
+        <div className="builder__comment-display--stamps">
+          <span className="builder__comment-display--stamps-name">
+            {props.name}
+          </span>
+          <span className="builder__comment-display--stamps-time">
             {props.timestamp}
           </span>
         </div>
-        <div className="comment-display__content">{props.comment}</div>
+        <div className="builder__comment-display--content">{props.comment}</div>
       </div>
     </div>
   );
