@@ -1,8 +1,8 @@
 import React from "react";
 
 // Link here doesn't really want to work. Second set of eyes?
-// import LikesIcon from "../assets/icons/SVG/Icon-likes.svg";
-// import ViewsIcon from "../assets/icons/SVG/Icon-views.svg";
+// import LikesIcon from "../../assets/icons/SVG/Icon-likes.svg";
+// import ViewsIcon from "../../assets/icons/SVG/Icon-views.svg";
 
 export default function VideoInfo(props) {
   let MainPost = {
