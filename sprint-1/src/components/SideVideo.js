@@ -1,9 +1,11 @@
+import ImageOne from "../assets/images/video-list-1.jpg";
+
 const SideVideo = [
   {
     id: "1",
     title: "Become a Travel Pro In One Easy Lesson",
     channel: "Todd Welch",
-    image: "../assets/images/video-list-1.jpg"
+    image: {ImageOne}
   },
   {
     id: "2",

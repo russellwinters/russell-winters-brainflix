@@ -5,7 +5,7 @@ import VideoInfo from "./components/VideoInfo";
 import CommentSection from "./components/CommentSection";
 import MainVideo from "./components/MainVideo";
 import SideVideo from "./components/SideVideo";
-// import CommentArray from "./components/CommentArray";
+import Aside from "./components/Aside";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Video />
       <VideoInfo />
       <CommentSection CommentData={MainVideo} />
+      <Aside VideoData={SideVideo} />
     </div>
   );
 }
