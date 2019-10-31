@@ -590,4 +590,123 @@ body {
     width: 100%;
   }
 }
+
+.aside {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+}
+
+.aside-header {
+  margin: 40px 0;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+.aside-content {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.aside-content__image-container {
+  width: 37.5vw;
+  height: 21.875vw;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+.aside-content__image-container--content {
+  width: 120%;
+  height: auto;
+}
+
+.aside-content__info-container {
+  width: 47.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.aside-content__info-container--title {
+  width: 100%;
+  line-height: 24px;
+  height: 48px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir-demi-bold";
+}
+
+.aside-content__info-container--channel {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir";
+}
+
+@media only screen and (min-width: 768px) {
+  .aside {
+    width: 45.31vw;
+    margin: unset;
+    margin-left: 24px;
+  }
+  .aside-content {
+    width: 100%;
+  }
+  .aside-content__image-container {
+    width: 25vw;
+    height: 9.11vw;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .aside-content__image-container--content {
+    width: 120%;
+    height: auto;
+  }
+  .aside-content__info-container {
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .page-content {
+    position: relative;
+  }
+  .page-content .aside {
+    width: 24.44vw;
+    position: absolute;
+    top: 0px;
+    right: 180px;
+  }
+  .page-content .aside-content__image-container {
+    width: 28vw;
+    height: 5vw;
+  }
+}
 /*# sourceMappingURL=main.css.map */

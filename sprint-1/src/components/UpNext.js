@@ -3,13 +3,20 @@ import React from "react";
 export default function UpNext(props) {
   console.log(props);
   return (
-    <div>
-      <div className="image-container">
-        <img src={props.img} />
+    <div className="aside-content">
+      <div className="aside-content__image-container">
+        <img
+          className="aside-content__image-container--content"
+          src={props.img}
+        />
       </div>
-      <div className="info-container">
-        <span className="info-container__title">{props.title}</span>
-        <span className="info-container__channel">{props.channel}</span>
+      <div className="aside-content__info-container">
+        <span className="aside-content__info-container--title">
+          {props.title}
+        </span>
+        <span className="aside-content__info-container--channel">
+          {props.channel}
+        </span>
       </div>
     </div>
   );
