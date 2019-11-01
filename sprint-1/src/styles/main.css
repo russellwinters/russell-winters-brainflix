@@ -109,6 +109,9 @@ body {
 
 .header__content--nav-button {
   width: calc(100% - 64px);
+  background-image: url(../assets/icons/SVG/Icon-upload.svg);
+  background-repeat: no-repeat;
+  background-position: 30% 45%;
   border-radius: 8px;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -175,6 +178,7 @@ body {
   }
   .header__content--nav-button {
     width: calc(100% - 64px);
+    background-position: 5% 45%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -196,6 +200,9 @@ body {
   }
   .header__content {
     width: 35vw;
+  }
+  .header__content--nav-button {
+    background-position: 15% 45%;
   }
 }
 
@@ -278,13 +285,23 @@ body {
 }
 
 .post-container__info-stats {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 22px;
   font-family: "avenir";
+}
+
+.post-container__info-stats-views img {
+  height: 12px;
+  margin-right: 8px;
 }
 
 .post-container__info-stats-likes {
   margin-left: 24px;
+}
+
+.post-container__info-stats-likes img {
+  height: 12px;
+  margin-right: 8px;
 }
 
 .post-description {
@@ -341,6 +358,7 @@ body {
     line-height: 22px;
     font-family: "avenir";
     margin-top: 40px;
+    padding-bottom: unset;
   }
 }
 
@@ -356,6 +374,7 @@ body {
   }
   .post-description {
     width: 36.67vw;
+    padding-bottom: 64px;
   }
 }
 
@@ -423,21 +442,33 @@ body {
 .comments-form__container-subdiv-input--content::-webkit-input-placeholder {
   color: #323232;
   white-space: pre-line;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
 }
 
 .comments-form__container-subdiv-input--content:-ms-input-placeholder {
   color: #323232;
   white-space: pre-line;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
 }
 
 .comments-form__container-subdiv-input--content::-ms-input-placeholder {
   color: #323232;
   white-space: pre-line;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
 }
 
 .comments-form__container-subdiv-input--content::placeholder {
   color: #323232;
   white-space: pre-line;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
 }
 
 .comments-form__container-subdiv-button {

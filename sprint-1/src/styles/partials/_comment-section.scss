@@ -43,6 +43,7 @@
           &--content::placeholder {
             color: $black;
             white-space: pre-line;
+            @include paragraphs;
           }
         }
 

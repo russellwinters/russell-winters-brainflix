@@ -3,7 +3,7 @@ import Headshot from "../assets/images/Mohan-muruge.jpg";
 import CommentBuilder from "./CommentBuilder";
 
 export default function CommentSection(props) {
-  let newComment = props.CommentData.comments;
+  let newComment = props.CommentData.MainVideo.comments;
   let comments = newComment.map(comment => {
     return (
       <CommentBuilder
@@ -26,11 +26,12 @@ export default function CommentSection(props) {
               <span className="comments-form__container-subdiv-input--heading">
                 Join the Conversation
               </span>
-              <input
+              <textarea
                 className="comments-form__container-subdiv-input--content"
                 type="text"
                 placeholder="That was easily the most spectacular BMX moment ever."
-              ></input>
+                resize="none"
+              ></textarea>
             </div>
             <button className="comments-form__container-subdiv-button">
               Comment

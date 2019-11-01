@@ -7,18 +7,24 @@ import MainVideo from "./components/MainVideo";
 import SideVideo from "./components/SideVideo";
 import Aside from "./components/Aside";
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Video />
-      <div className="page-content">
-        <VideoInfo />
-        <CommentSection CommentData={MainVideo} />
-        <Aside VideoData={SideVideo} />
-      </div>
-    </div>
-  );
-}
+class App extends React.Component {
+  state = {
+    MainPost: { MainVideo },
+    VideoQueue: { SideVideo }
+  };
 
+  render() {
+    return (
+      <div>
+        <Header />
+        <Video />
+        <div className="page-content">
+          <VideoInfo postInfo={this.state.MainPost} />
+          <CommentSection CommentData={this.state.MainPost} />
+          <Aside VideoData={this.state.VideoQueue} />
+        </div>
+      </div>
+    );
+  }
+}
 export default App;

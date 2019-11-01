@@ -48,6 +48,9 @@
 
       &-button {
         width: calc(100% - 64px);
+        background-image: url(../assets/icons/SVG/Icon-upload.svg);
+        background-repeat: no-repeat;
+        background-position: 30% 45%;
         border-radius: 8px;
         box-shadow: none;
         background-color: $brainflix-blue;
@@ -97,6 +100,7 @@
 
         &-button {
           width: calc(100% - 64px);
+          background-position: 5% 45%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -116,6 +120,10 @@
 
     &__content {
       width: 35vw;
+
+      &--nav-button {
+        background-position: 15% 45%;
+      }
     }
   }
 }

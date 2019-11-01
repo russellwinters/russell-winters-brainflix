@@ -32,10 +32,21 @@
       }
 
       &-stats {
-        @include mobile-paragraph-lists;
+        @include paragraphs;
 
+        &-views {
+          & img {
+            height: 12px;
+            margin-right: 8px;
+          }
+        }
         &-likes {
           margin-left: 24px;
+
+          & img {
+            height: 12px;
+            margin-right: 8px;
+          }
         }
       }
     }
@@ -85,6 +96,7 @@
       width: 70vw;
       @include paragraphs;
       margin-top: 40px;
+      padding-bottom: unset;
     }
   }
 }
@@ -106,6 +118,7 @@
 
     &-description {
       width: 36.67vw;
+      padding-bottom: 64px;
     }
   }
 }

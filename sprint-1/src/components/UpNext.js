@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function UpNext(props) {
-  console.log(props);
   return (
     <div className="aside-content">
       <div className="aside-content__image-container">
