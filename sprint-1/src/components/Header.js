@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/logo/Logo-brainflix.svg";
 import ProfileImg from "../assets/images/Mohan-muruge.jpg";
 import SearchIcon from "../assets/icons/SVG/Icon-search.svg";
+import UploadIcon from "../assets/icons/SVG/Icon-upload.svg";
 
 export default function Header() {
   return (
@@ -19,7 +20,9 @@ export default function Header() {
           ></input>
         </div>
         <nav className="header__content--nav">
-          <button className="header__content--nav-button">+ Upload</button>
+          <button className="header__content--nav-button">
+            {/* {UploadIcon} */} Upload
+          </button>
           <img className="header__content--nav--headshot" src={ProfileImg} />
         </nav>
       </div>

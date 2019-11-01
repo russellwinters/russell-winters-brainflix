@@ -280,7 +280,7 @@ body {
 
 .post-description {
   margin-top: 24px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   font-size: 13px;
   line-height: 18px;
   font-family: "avenir";
@@ -340,6 +340,7 @@ body {
     width: 49.44vw;
     margin: unset;
     margin-left: 180px;
+    border-right: 1px solid #e1e1e1;
   }
   .post-container__info-stats {
     margin-right: 32px;
@@ -484,6 +485,7 @@ body {
     width: 49.44vw;
     margin: unset;
     margin-left: 180px;
+    border-right: 1px solid #e1e1e1;
   }
   .comments-form__container {
     width: 100%;
