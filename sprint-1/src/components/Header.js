@@ -21,7 +21,11 @@ export default function Header() {
         </div>
         <nav className="header__content--nav">
           <button className="header__content--nav-button">
-            {/* {UploadIcon} */} Upload
+            <img
+              className="header__content--nav-button-icon"
+              src={UploadIcon}
+            />{" "}
+            Upload
           </button>
           <img className="header__content--nav--headshot" src={ProfileImg} />
         </nav>

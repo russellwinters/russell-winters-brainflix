@@ -1,8 +1,8 @@
 import React from "react";
 
 // Link here doesn't really want to work. Second set of eyes?
-// import LikesIcon from "../../assets/icons/SVG/Icon-likes.svg";
-// import ViewsIcon from "../../assets/icons/SVG/Icon-views.svg";
+import LikesIcon from "../assets/icons/SVG/Icon-likes.svg";
+import ViewsIcon from "../assets/icons/SVG/Icon-views.svg";
 
 export default function VideoInfo(props) {
   let MainPost = {
@@ -30,11 +30,11 @@ export default function VideoInfo(props) {
           </div>
           <div className="post-container__info-stats">
             <span className="post-container__info-stats-views">
-              {/* {ViewsIcon} */}
+              <img src={ViewsIcon} />
               {MainPost.views}
             </span>
             <span className="post-container__info-stats-likes">
-              {/* {LikesIcon} Where Icon isn't working */}
+              <img src={LikesIcon} />
               {MainPost.likes}
             </span>
           </div>
