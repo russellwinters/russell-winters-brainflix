@@ -1,14 +1,15 @@
 import React from "react";
-import OurVideo from "../assets/video/sample-video.mp4";
-import Poster from "../assets/images/video-list-0.jpg";
 
-export default function MainVideo() {
+export default function MainVideo(props) {
+  let Video = props.video.MainVideo.video;
+  let Poster = props.video.MainVideo.image;
+
   return (
     <section className="video-container">
       <video className="video-container__content" poster={Poster} controls>
         <source
           className="video-container__content-src"
-          src={OurVideo}
+          src={Video}
           type="video/mp4"
         />
       </video>

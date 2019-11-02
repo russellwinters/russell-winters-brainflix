@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Video />
+        <Video video={this.state.MainPost} />
         <div className="page-content">
           <VideoInfo postInfo={this.state.MainPost} />
           <CommentSection CommentData={this.state.MainPost} />
