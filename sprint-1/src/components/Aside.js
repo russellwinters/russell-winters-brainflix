@@ -3,7 +3,14 @@ import UpNext from "./UpNext";
 
 export default function Aside(props) {
   const VideoList = props.VideoData.SideVideo.map(obj => {
-    return <UpNext title={obj.title} channel={obj.channel} img={obj.image} />;
+    return (
+      <UpNext
+        title={obj.title}
+        channel={obj.channel}
+        img={obj.image}
+        key={obj.id}
+      />
+    );
   });
   return (
     <div className="aside">

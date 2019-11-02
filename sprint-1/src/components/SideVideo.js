@@ -9,49 +9,49 @@ import ImageEight from "../assets/images/video-list-8.jpg";
 
 const SideVideo = [
   {
-    id: "1",
+    id: 1,
     title: "Become a Travel Pro In One Easy Lesson",
     channel: "Todd Welch",
     image: ImageOne
   },
   {
-    id: "2",
+    id: 2,
     title: "Les Houches The Hidden Gem Of the Chamonix",
     channel: "Cornelia Blair",
     image: ImageTwo
   },
   {
-    id: "3",
+    id: 3,
     title: "Travel Health Useful Medical Information For",
     channel: "Glen Harper",
     image: ImageThree
   },
   {
-    id: "4",
+    id: 4,
     title: "Cheap Airline Tickets Great Ways to Save",
     channel: "Emily Harper",
     image: ImageFour
   },
   {
-    id: "5",
+    id: 5,
     title: "Take A romantic break in a boutique hotel",
     channel: "Ethan Owen",
     image: ImageFive
   },
   {
-    id: "6",
+    id: 6,
     title: "CHoose the Perfect Accomodations",
     channel: "Lydia Perez",
     image: ImageSix
   },
   {
-    id: "7",
+    id: 7,
     title: "Cruising Destination Ideas",
     channel: "Timothy Austin",
     image: ImageSeven
   },
   {
-    id: "8",
+    id: 8,
     title: "Train Travel On Track For Safety",
     channel: "Scotty Cranmer",
     image: ImageEight

@@ -10,6 +10,7 @@ export default function CommentSection(props) {
         timestamp={comment.timestamp}
         name={comment.name}
         comment={comment.comment}
+        key={comment.id}
       />
     );
   });
@@ -20,7 +21,11 @@ export default function CommentSection(props) {
           3{/* The 3 will be props.propName.length*/} Comments
         </h3>
         <div className="comments-form__container">
-          <img className="comments-form__container-img" src={Headshot} />
+          <img
+            className="comments-form__container-img"
+            src={Headshot}
+            alt="Headshot"
+          />
           <div className="comments-form__container-subdiv">
             <div className="comments-form__container-subdiv-input">
               <span className="comments-form__container-subdiv-input--heading">

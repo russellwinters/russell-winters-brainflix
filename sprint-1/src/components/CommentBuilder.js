@@ -4,6 +4,7 @@ import Headshot from "../assets/images/Mohan-muruge.jpg";
 //Trying to make this a function that will build a comment DIV
 
 export default function CommentBuilder(props) {
+  // console.log(props.key);
   return (
     <div className="builder">
       <div className="builder__img-container">

@@ -7,6 +7,7 @@ export default function UpNext(props) {
         <img
           className="aside-content__image-container--content"
           src={props.img}
+          alt="Queue Poster"
         />
       </div>
       <div className="aside-content__info-container">

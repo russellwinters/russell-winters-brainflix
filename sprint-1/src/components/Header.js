@@ -6,12 +6,13 @@ import SearchIcon from "../assets/icons/SVG/Icon-search.svg";
 export default function Header() {
   return (
     <header className="header">
-      <img className="header__logo" src={Logo} />
+      <img className="header__logo" src={Logo} alt="Site Logo" />
       <div className="header__content">
         <div className="header__content--search-container">
           <img
             className="header__content--search-container-icon"
             src={SearchIcon}
+            alt="Search Icon"
           />
           <input
             className="header__content--search-container-input"
@@ -20,7 +21,11 @@ export default function Header() {
         </div>
         <nav className="header__content--nav">
           <button className="header__content--nav-button">Upload</button>
-          <img className="header__content--nav--headshot" src={ProfileImg} />
+          <img
+            className="header__content--nav--headshot"
+            src={ProfileImg}
+            alt="Profile Headshot"
+          />
         </nav>
       </div>
     </header>

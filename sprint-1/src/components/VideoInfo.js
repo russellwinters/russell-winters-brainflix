@@ -20,11 +20,11 @@ export default function VideoInfo(props) {
           </div>
           <div className="post-container__info-stats">
             <span className="post-container__info-stats-views">
-              <img src={ViewsIcon} />
+              <img src={ViewsIcon} alt="Views Icon" />
               {MainInfo.views}
             </span>
             <span className="post-container__info-stats-likes">
-              <img src={LikesIcon} />
+              <img src={LikesIcon} alt="Likes Icon" />
               {MainInfo.likes}
             </span>
           </div>

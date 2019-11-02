@@ -33,7 +33,7 @@
 
       &-stats {
         @include paragraphs;
-
+        //*Icons and text don't really match the mockups. Had issues finding a provided font that matched the mockup's asthetic
         &-views {
           & img {
             height: 12px;
