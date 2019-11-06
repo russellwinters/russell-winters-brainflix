@@ -13,10 +13,14 @@ import axios from "axios";
 const projectKey = "4d27b0a1-1ba3-4823-a43c-632131c75720";
 
 export default class PostComponent extends Component {
-  state = {
-    MainPost: {},
-    VideoQueue: {}
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      MainPost: {},
+      VideoQueue: {},
+      PostID: ""
+    };
+  }
 
   componentDidMount() {
     let videoQueue;
@@ -33,15 +37,18 @@ export default class PostComponent extends Component {
           )
           .then(response => {
             mainPost = response.data;
+            console.log(response.data.id);
             this.setState({
               MainPost: mainPost,
-              VideoQueue: videoQueue
+              VideoQueue: videoQueue,
+              PostID: response.data.id
             });
           });
       });
   }
 
   render() {
+    console.log(this.state);
     if (Object.keys(this.state.MainPost).length === 0) {
       return (
         <>
@@ -58,6 +65,7 @@ export default class PostComponent extends Component {
             <Aside
               VideoData={this.state.VideoQueue}
               postInfo={this.state.MainPost}
+              postID={this.state.PostID}
             />
           </div>
         </>
@@ -65,7 +73,8 @@ export default class PostComponent extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log("The component Updated");
+  componentDidUpdate(prevProps) {
+    console.log(prevProps);
+    console.log(this.props);
   }
 }
