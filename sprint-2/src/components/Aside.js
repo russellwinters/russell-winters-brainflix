@@ -2,7 +2,7 @@ import React from "react";
 import UpNext from "./UpNext";
 
 export default function Aside(props) {
-  // console.log(props.postInfo.id);
+  console.log(props.VideoData[0].id);
   const postID = props.postInfo.id;
   const VideoList = props.VideoData.map(obj => {
     if (obj.id !== postID) {
@@ -11,7 +11,7 @@ export default function Aside(props) {
           title={obj.title}
           channel={obj.channel}
           img={obj.image}
-          key={obj.id}
+          id={obj.id}
         />
       );
     }
