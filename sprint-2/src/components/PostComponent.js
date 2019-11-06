@@ -19,14 +19,12 @@ export default class PostComponent extends Component {
   };
 
   componentDidMount() {
-    // console.log(this.state);
     let videoQueue;
     let mainPost;
     console.log("I am inside componentDidMount()");
     axios
       .get("https://project-2-api.herokuapp.com/videos?api_key=" + projectKey)
       .then(response => {
-        // console.log(response.data);
         videoQueue = response.data;
         axios
           .get(
@@ -34,7 +32,6 @@ export default class PostComponent extends Component {
               projectKey
           )
           .then(response => {
-            // console.log(response.data);
             mainPost = response.data;
             this.setState({
               MainPost: mainPost,
@@ -42,11 +39,9 @@ export default class PostComponent extends Component {
             });
           });
       });
-    // console.log(this.state);
   }
 
   render() {
-    // console.log(Object.keys(this.state.MainPost).length);
     if (Object.keys(this.state.MainPost).length === 0) {
       return (
         <>
@@ -68,5 +63,9 @@ export default class PostComponent extends Component {
         </>
       );
     }
+  }
+
+  componentDidUpdate() {
+    console.log("The component Updated");
   }
 }

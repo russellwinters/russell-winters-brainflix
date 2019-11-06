@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function MainVideo(props) {
+  console.log(props.video.video);
   let Video = props.video.video;
   let Poster = props.video.image;
 

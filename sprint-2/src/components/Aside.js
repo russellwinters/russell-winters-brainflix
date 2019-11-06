@@ -9,13 +9,9 @@ export default function Aside(props) {
     if (obj.id !== postID) {
       return (
         //This link needs to use the props.match.url or .path method then obj.id.
-        <Link to={`/videos/${obj.id}`}>
-        <UpNext
-          title={obj.title}
-          channel={obj.channel}
-          img={obj.image}
-          id={obj.id}
-        />
+        //Need onClick function inside that Link. Function from notes.
+        <Link to={`/videos/${obj.id}`} key={obj.id}>
+          <UpNext title={obj.title} channel={obj.channel} img={obj.image} />
         </Link>
       );
     }
