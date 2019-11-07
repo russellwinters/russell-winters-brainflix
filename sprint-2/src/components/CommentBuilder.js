@@ -1,21 +1,11 @@
 import React from "react";
 import Headshot from "../assets/images/Mohan-muruge.jpg";
+import EpochTime from "./EpochTime";
 
 //Trying to make this a function that will build a comment DIV
 
 export default function CommentBuilder(props) {
   // console.log(props.key);
-  function epochTimeFunction(num) {
-    let output = new Date(num);
-    let dateStamp =
-      output.getMonth() +
-      1 +
-      "/" +
-      output.getDate() +
-      "/" +
-      output.getFullYear();
-    return dateStamp;
-  }
 
   return (
     <div className="builder">
@@ -32,7 +22,7 @@ export default function CommentBuilder(props) {
             {props.name}
           </span>
           <span className="builder__comment-display--stamps-time">
-            {epochTimeFunction(props.timestamp)}
+            {EpochTime(props.timestamp)}
           </span>
         </div>
         <div className="builder__comment-display--content">{props.comment}</div>

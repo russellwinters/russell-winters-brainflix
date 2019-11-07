@@ -13,6 +13,7 @@ export default function Aside(props) {
       );
     }
   });
+
   return (
     <div className="aside">
       <h3 className="aside-header">Up Next</h3>

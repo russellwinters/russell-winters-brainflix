@@ -4,6 +4,7 @@ import VideoInfo from "./VideoInfo";
 import CommentSection from "./CommentSection";
 import Aside from "./Aside";
 import axios from "axios";
+import loading from "../assets/images/loading.jpg";
 
 // const axiosRegister = axios
 //   .get("https://project-2-api.herokuapp.com/register")
@@ -37,7 +38,6 @@ export default class PostComponent extends Component {
           )
           .then(response => {
             mainPost = response.data;
-            // console.log(response.data.id);
             this.setState({
               MainPost: mainPost,
               VideoQueue: videoQueue,
@@ -52,6 +52,7 @@ export default class PostComponent extends Component {
       return (
         <>
           <h1>Loading</h1>
+          <img src={loading} alt="Why are you the way that you are" />
         </>
       );
     } else {

@@ -1,21 +1,10 @@
 import React from "react";
 import LikesIcon from "../assets/icons/SVG/Icon-likes.svg";
 import ViewsIcon from "../assets/icons/SVG/Icon-views.svg";
+import EpochTime from "./EpochTime";
 
 export default function VideoInfo(props) {
   let MainInfo = props.postInfo;
-
-  function epochTimeFunction(num) {
-    let output = new Date(num);
-    let dateStamp =
-      output.getMonth() +
-      1 +
-      "/" +
-      output.getDate() +
-      "/" +
-      output.getFullYear();
-    return dateStamp;
-  }
 
   return (
     <section className="post">
@@ -27,7 +16,7 @@ export default function VideoInfo(props) {
               By {MainInfo.channel}
             </span>
             <span className="post-container__info-stamps-date">
-              {epochTimeFunction(MainInfo.timestamp)}
+              {EpochTime(MainInfo.timestamp)}
             </span>
           </div>
           <div className="post-container__info-stats">
