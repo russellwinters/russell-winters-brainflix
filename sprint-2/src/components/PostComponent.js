@@ -75,6 +75,6 @@ export default class PostComponent extends Component {
 
   componentDidUpdate(prevProps) {
     console.log(prevProps);
-    console.log(this.props);
+    console.log(this.props.match.params.videoID);
   }
 }

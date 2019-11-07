@@ -5,13 +5,21 @@ import PostComponent from "./components/PostComponent";
 import UploadPage from "./components/UploadPage";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
         <Header />
         <Switch>
-          <Route path="/" exact component={PostComponent} />
-          <Route path="/videos" component={PostComponent} />
+          <Route
+            exact
+            path="/"
+            render={props => <PostComponent {...props} />}
+          />
+          {/* <Route path="/videos" component={PostComponent} {...props} /> */}
           <Route path="/videos/:videoID" component={PostComponent} />
           <Route path="/upload" component={UploadPage} />
         </Switch>
