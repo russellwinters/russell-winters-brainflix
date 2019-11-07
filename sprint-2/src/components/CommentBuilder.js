@@ -5,6 +5,18 @@ import Headshot from "../assets/images/Mohan-muruge.jpg";
 
 export default function CommentBuilder(props) {
   // console.log(props.key);
+  function epochTimeFunction(num) {
+    let output = new Date(num);
+    let dateStamp =
+      output.getMonth() +
+      1 +
+      "/" +
+      output.getDate() +
+      "/" +
+      output.getFullYear();
+    return dateStamp;
+  }
+
   return (
     <div className="builder">
       <div className="builder__img-container">
@@ -20,7 +32,7 @@ export default function CommentBuilder(props) {
             {props.name}
           </span>
           <span className="builder__comment-display--stamps-time">
-            {props.timestamp}
+            {epochTimeFunction(props.timestamp)}
           </span>
         </div>
         <div className="builder__comment-display--content">{props.comment}</div>

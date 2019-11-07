@@ -5,6 +5,18 @@ import ViewsIcon from "../assets/icons/SVG/Icon-views.svg";
 export default function VideoInfo(props) {
   let MainInfo = props.postInfo;
 
+  function epochTimeFunction(num) {
+    let output = new Date(num);
+    let dateStamp =
+      output.getMonth() +
+      1 +
+      "/" +
+      output.getDate() +
+      "/" +
+      output.getFullYear();
+    return dateStamp;
+  }
+
   return (
     <section className="post">
       <div className="post-container">
@@ -15,7 +27,7 @@ export default function VideoInfo(props) {
               By {MainInfo.channel}
             </span>
             <span className="post-container__info-stamps-date">
-              {MainInfo.timestamp}
+              {epochTimeFunction(MainInfo.timestamp)}
             </span>
           </div>
           <div className="post-container__info-stats">
