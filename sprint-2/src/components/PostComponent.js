@@ -37,7 +37,7 @@ export default class PostComponent extends Component {
           )
           .then(response => {
             mainPost = response.data;
-            console.log(response.data.id);
+            // console.log(response.data.id);
             this.setState({
               MainPost: mainPost,
               VideoQueue: videoQueue,
@@ -48,7 +48,6 @@ export default class PostComponent extends Component {
   }
 
   render() {
-    console.log(this.state);
     if (Object.keys(this.state.MainPost).length === 0) {
       return (
         <>
@@ -74,7 +73,20 @@ export default class PostComponent extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log(prevProps);
-    console.log(this.props.match.params.videoID);
+    // console.log(prevProps);
+    // console.log(this.props.match.params.videoID);
+    let id = this.props.match.params.videoID;
+
+    if (this.props.match.params.videoID !== prevProps.match.params.videoID) {
+      console.log("*Dwight Schrute emphatically states* FALSE");
+      axios
+        .get(
+          `https://project-2-api.herokuapp.com/videos/${id}?api_key=` +
+            projectKey
+        )
+        .then(response => {
+          this.setState({ MainPost: response.data });
+        });
+    }
   }
 }
