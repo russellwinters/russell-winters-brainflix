@@ -11,6 +11,11 @@ export default class CommentSection extends React.Component {
   }
 
   render() {
+    console.log(this.state.commentArr);
+
+    // practicing uuid
+    const uuidv4 = require("uuid/v4");
+    console.log(uuidv4());
     let newComment = this.state.commentArr;
     let comments = newComment.map(comment => {
       return (
@@ -42,6 +47,7 @@ export default class CommentSection extends React.Component {
                 <textarea
                   className="comments-form__container-subdiv-input--content"
                   type="text"
+                  name="comment"
                   placeholder="That was easily the most spectacular BMX moment ever."
                   resize="none"
                 ></textarea>

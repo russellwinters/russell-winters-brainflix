@@ -8,4 +8,9 @@ To do:
 Progress on Diving Deeper:
 
 1. Comment Section is now class component.
-2. Need to make onCLick function for form
+2. Installed UUID so that I can generate keys for each of the posted comments.
+
+3. Need to make onCLick function for form that will:
+   - greate object from for that contains{ comment: (event.target.comment.value), id: uuidv4(), name: "annonymous", timestamp: epochtime}
+   - post object to api
+   - get api data again to update component's state.
