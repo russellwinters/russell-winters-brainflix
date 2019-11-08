@@ -50,10 +50,16 @@ export default class PostComponent extends Component {
   render() {
     if (Object.keys(this.state.MainPost).length === 0) {
       return (
-        <>
-          <h1>Loading</h1>
-          <img src={loading} alt="Why are you the way that you are" />
-        </>
+        <div className="loading">
+          <h1 className="loading-title">Loading</h1>
+          <div className="loading-img">
+            <img
+              className="loading-img--content"
+              src={loading}
+              alt="Why are you the way that you are"
+            />
+          </div>
+        </div>
       );
     } else {
       return (

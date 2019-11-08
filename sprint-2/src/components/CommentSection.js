@@ -1,21 +1,22 @@
 import React from "react";
 import Headshot from "../assets/images/Mohan-muruge.jpg";
 import CommentBuilder from "./CommentBuilder";
+// import SubmitPost from "./SubmitPost";
+// import axios from "axios";
+// const uuidv4 = require("uuid/v4");
 
 export default class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      commentArr: props.CommentData.comments
+      commentArr: props.CommentData.comments,
+      mainPost: props.CommentData
     };
   }
 
   render() {
-    console.log(this.state.commentArr);
+    console.log(this.state.mainPost.id);
 
-    // practicing uuid
-    const uuidv4 = require("uuid/v4");
-    console.log(uuidv4());
     let newComment = this.state.commentArr;
     let comments = newComment.map(comment => {
       return (
@@ -40,7 +41,10 @@ export default class CommentSection extends React.Component {
               alt="Headshot"
             />
             <div className="comments-form__container-subdiv">
-              <form className="comments-form__container-subdiv-input">
+              <div
+                className="comments-form__container-subdiv-input"
+                // onSubmit={submitPost}
+              >
                 <span className="comments-form__container-subdiv-input--heading">
                   Join the Conversation
                 </span>
@@ -51,7 +55,7 @@ export default class CommentSection extends React.Component {
                   placeholder="That was easily the most spectacular BMX moment ever."
                   resize="none"
                 ></textarea>
-              </form>
+              </div>
               <button className="comments-form__container-subdiv-button">
                 Comment
               </button>
