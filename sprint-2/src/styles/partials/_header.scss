@@ -46,19 +46,26 @@
       margin-bottom: 16px;
       height: 48px;
 
-      &-button {
+      & a {
         width: calc(100% - 64px);
-        background-image: url(../assets/icons/SVG/Icon-upload.svg);
-        background-repeat: no-repeat;
-        background-position: 30% 45%;
-        border-radius: 8px;
-        box-shadow: none;
-        background-color: $brainflix-blue;
-        border: none;
-        text-transform: uppercase;
-        @include mobile-subheader;
-        color: $white;
+        height: 48px;
+
+        .header__content--nav-button {
+          height: 100%;
+          width: 100%;
+          background-image: url(../assets/icons/SVG/Icon-upload.svg);
+          background-repeat: no-repeat;
+          background-position: 30% 45%;
+          border-radius: 8px;
+          box-shadow: none;
+          background-color: $brainflix-blue;
+          border: none;
+          text-transform: uppercase;
+          @include mobile-subheader;
+          color: $white;
+        }
       }
+
       &--headshot {
         width: 48px;
         border-radius: 48px;
@@ -98,12 +105,17 @@
         margin-bottom: unset;
         margin-top: unset;
 
-        &-button {
+        & a {
           width: calc(100% - 64px);
-          background-position: 5% 45%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          text-decoration: none;
+
+          .header__content--nav-button {
+            width: 100%;
+            background-position: 5% 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
     }

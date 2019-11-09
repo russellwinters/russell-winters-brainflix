@@ -24,11 +24,9 @@ export default function Header() {
         </div>
         <nav className="header__content--nav">
           {/* todo: Link should be the commented link, but styles get fucked up so I'll have to change that. */}
-          {/* <Link to="/upload"> */}
-          <button className="header__content--nav-button">
-            <Link to="/upload">Upload</Link>
-          </button>
-          {/* </Link> */}
+          <Link to="/upload">
+            <button className="header__content--nav-button">Upload</button>
+          </Link>
           <img
             className="header__content--nav--headshot"
             src={ProfileImg}

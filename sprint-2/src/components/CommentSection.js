@@ -40,7 +40,7 @@ export default class CommentSection extends React.Component {
               src={Headshot}
               alt="Headshot"
             />
-            <div className="comments-form__container-subdiv">
+            <form className="comments-form__container-subdiv">
               <div
                 className="comments-form__container-subdiv-input"
                 // onSubmit={submitPost}
@@ -59,7 +59,7 @@ export default class CommentSection extends React.Component {
               <button className="comments-form__container-subdiv-button">
                 Comment
               </button>
-            </div>
+            </form>
           </div>
         </div>
         {comments}
