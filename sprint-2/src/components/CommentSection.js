@@ -1,9 +1,6 @@
 import React from "react";
 import Headshot from "../assets/images/Mohan-muruge.jpg";
 import CommentBuilder from "./CommentBuilder";
-// import SubmitPost from "./SubmitPost";
-// import axios from "axios";
-// const uuidv4 = require("uuid/v4");
 
 export default class CommentSection extends React.Component {
   constructor(props) {
@@ -31,9 +28,7 @@ export default class CommentSection extends React.Component {
     return (
       <section className="comments">
         <div className="comments-form">
-          <h3 className="comments-form__heading">
-            3{/* The 3 will be props.propName.length*/} Comments
-          </h3>
+          <h3 className="comments-form__heading">3 Comments</h3>
           <div className="comments-form__container">
             <img
               className="comments-form__container-img"
@@ -41,10 +36,7 @@ export default class CommentSection extends React.Component {
               alt="Headshot"
             />
             <form className="comments-form__container-subdiv">
-              <div
-                className="comments-form__container-subdiv-input"
-                // onSubmit={submitPost}
-              >
+              <div className="comments-form__container-subdiv-input">
                 <span className="comments-form__container-subdiv-input--heading">
                   Join the Conversation
                 </span>

@@ -2,8 +2,6 @@ import React from "react";
 import Headshot from "../assets/images/Mohan-muruge.jpg";
 import EpochTime from "./EpochTime";
 
-//Trying to make this a function that will build a comment DIV
-
 export default function CommentBuilder(props) {
   return (
     <div className="builder">
