@@ -96,7 +96,7 @@ h1 {
 
   .form {
     width: calc(100vw - 48px);
-    border-top: 1px solid $silver;
+    border-top: 1px solid $mercury;
     padding-top: 40px;
 
     &-flex {
@@ -122,6 +122,42 @@ h1 {
 
       &__content {
         width: 160px;
+      }
+    }
+  }
+}
+
+@include large {
+  h1 {
+    margin-left: 180px;
+  }
+
+  .form {
+    width: calc(100vw - 360px);
+
+    &-flex {
+      flex-direction: row;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $mercury;
+
+      &__thumbnail {
+        width: 344px;
+        height: 183px;
+        margin-bottom: unset;
+      }
+
+      &-content {
+        width: 100%;
+        margin-left: 24px;
+
+        &__description-input {
+          padding-bottom: unset;
+          border-bottom: unset;
+          &--content {
+            height: 94px;
+            min-height: unset;
+          }
+        }
       }
     }
   }
