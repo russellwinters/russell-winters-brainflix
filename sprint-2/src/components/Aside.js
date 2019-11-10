@@ -7,7 +7,7 @@ export default function Aside(props) {
   const VideoList = props.VideoData.map(obj => {
     if (obj.id !== postID) {
       return (
-        <Link to={`/videos/${obj.id}`} key={obj.id}>
+        <Link to={`/videos/${obj.id}`} key={obj.id} className="up-next">
           <UpNext title={obj.title} channel={obj.channel} img={obj.image} />
         </Link>
       );

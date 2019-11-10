@@ -8,6 +8,10 @@
   }
 }
 
+.up-next {
+  text-decoration: none;
+  color: $black;
+}
 .aside-content {
   width: calc(100vw - 32px);
   margin: $center;

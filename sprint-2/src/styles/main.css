@@ -39,6 +39,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: none;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .header__logo {
@@ -137,7 +138,8 @@ body {
 
 @media only screen and (min-width: 768px) {
   .header {
-    width: calc(100vw - 48px);
+    width: 100vw;
+    padding: 0 24px;
     height: 80px;
     margin: 0 auto;
     display: -webkit-box;
@@ -657,6 +659,11 @@ body {
   color: #afafaf;
 }
 
+.up-next {
+  text-decoration: none;
+  color: #323232;
+}
+
 .aside-content {
   width: calc(100vw - 32px);
   margin: 0 auto;
@@ -803,6 +810,175 @@ body {
 @media only screen and (min-width: 1440px) {
   .loading-img {
     width: 50vw;
+  }
+}
+
+h1 {
+  margin: 24px 0 32px 16px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "avenir-bold";
+}
+
+.form {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+}
+
+.form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-flex .form-heading {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+.form-flex__thumbnail {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.form-flex__thumbnail--img-container {
+  width: 100%;
+  min-height: 153px;
+}
+
+.form-flex__thumbnail--img-container-content {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.form-flex-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-flex-content__title-input, .form-flex-content__description-input {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form-flex-content__title-input--content, .form-flex-content__description-input--content {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.form-flex-content__title-input--content::-webkit-input-placeholder, .form-flex-content__description-input--content::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  color: #323232;
+}
+
+.form-flex-content__title-input--content:-ms-input-placeholder, .form-flex-content__description-input--content:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  color: #323232;
+}
+
+.form-flex-content__title-input--content::-ms-input-placeholder, .form-flex-content__description-input--content::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  color: #323232;
+}
+
+.form-flex-content__title-input--content::placeholder, .form-flex-content__description-input--content::placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  color: #323232;
+}
+
+.form-flex-content__description-input {
+  height: unset;
+  margin-bottom: 32px;
+}
+
+.form-flex-content__description-input--content {
+  resize: none;
+  min-height: 143px;
+}
+
+.form .button-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .button-flex__content {
+  height: 48px;
+  border-radius: 4px;
+  border: none;
+  color: #0095ff;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir-demi-bold";
+  margin-bottom: 12px;
+}
+
+.form .button-flex__primary {
+  color: #ffffff;
+  background-color: #0095ff;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    padding: 48px 0 32px 0;
+    margin: 0 0 0 24px;
+  }
+  .form {
+    width: calc(100vw - 48px);
+    border-top: 1px solid #afafaf;
+    padding-top: 40px;
+  }
+  .form-flex__thumbnail {
+    margin-bottom: 40px;
+  }
+  .form-flex__thumbnail--img-container {
+    width: 344px;
+    height: 183px;
+  }
+  .form-flex-content__description-input {
+    margin-bottom: unset;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #afafaf;
+  }
+  .form .button-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 40px;
+  }
+  .form .button-flex__content {
+    width: 160px;
   }
 }
 /*# sourceMappingURL=main.css.map */
