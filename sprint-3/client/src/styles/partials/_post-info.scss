@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: calc(100vw - 32px);
+  margin: $center;
+
+  &-container {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $mercury;
+
+    &__heading {
+      @include mobile-header;
+      margin-bottom: 16px;
+    }
+
+    &__info {
+      &-stamps {
+        margin-bottom: 32px;
+
+        &-creator {
+          @include mobile-subheader;
+        }
+
+        &-date {
+          @include labels;
+          margin-left: 8px;
+        }
+      }
+
+      &-stats {
+        @include paragraphs;
+        //*Icons and text don't really match the mockups. Had issues finding a provided font that matched the mockup's asthetic
+        &-views {
+          & img {
+            height: 12px;
+            margin-right: 8px;
+          }
+        }
+        &-likes {
+          margin-left: 24px;
+
+          & img {
+            height: 12px;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &-description {
+    margin-top: 24px;
+    padding-bottom: 40px;
+    @include mobile-paragraph-lists;
+  }
+}
+
+@include medium {
+  .post {
+    width: calc(100vw - 48px);
+    margin-bottom: 64px;
+    &-container {
+      padding-top: 48px;
+      &__heading {
+        @include header;
+        margin-bottom: 24px;
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+
+        &-stamps {
+          margin-bottom: unset;
+
+          &-creator {
+            @include subheader;
+          }
+
+          &-date {
+            @include lists;
+          }
+        }
+
+        &-stats {
+          @include paragraphs;
+        }
+      }
+    }
+
+    &-description {
+      width: 70vw;
+      @include paragraphs;
+      margin-top: 40px;
+      padding-bottom: unset;
+    }
+  }
+}
+
+@include large {
+  .post {
+    width: 49.44vw;
+    margin: unset;
+    margin-left: 180px;
+    border-right: 1px solid $mercury;
+
+    &-container {
+      &__info {
+        &-stats {
+          margin-right: 32px;
+        }
+      }
+    }
+
+    &-description {
+      width: 36.67vw;
+      padding-bottom: 64px;
+    }
+  }
+}

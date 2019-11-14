@@ -1,0 +1,118 @@
+.comments {
+  width: calc(100vw - 32px);
+  margin: $center;
+
+  &-form {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $mercury;
+    &__heading {
+      @include mobile-subheader;
+      margin-bottom: 32px;
+    }
+
+    &__container {
+      display: flex;
+
+      &-img {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        margin: 16px 16px 0 0;
+      }
+
+      &-subdiv {
+        display: flex;
+        flex-direction: column;
+
+        &-input {
+          margin-bottom: 16px;
+
+          &--heading {
+            @include labels;
+          }
+
+          &--content {
+            width: 100%;
+            height: 96px;
+            border: 2px solid $brainflix-blue;
+            border-radius: 4px;
+            background-color: $alabaster;
+            padding: 6px;
+          }
+
+          &--content::placeholder {
+            color: $black;
+            white-space: pre-line;
+            @include paragraphs;
+          }
+        }
+
+        &-button {
+          height: 48px;
+          background-color: $brainflix-blue;
+          border: none;
+          @include mobile-subheader;
+          text-transform: uppercase;
+          color: $white;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+@include medium {
+  .comments {
+    width: calc(100vw - 48px);
+
+    &-form {
+      &__heading {
+        @include subheader;
+      }
+
+      &__container {
+        justify-content: space-between;
+        // align-items: flex-end;
+
+        &-subdiv {
+          margin-right: 40px;
+          flex-direction: row;
+          align-items: flex-end;
+
+          &-input {
+            width: 57.29vw;
+            margin-bottom: unset;
+            &--content {
+              height: 48px;
+              // width: 61.11vw;
+            }
+          }
+
+          &-button {
+            width: 20.83vw;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  .comments {
+    width: 49.44vw;
+    margin: unset;
+    margin-left: 180px;
+    border-right: 1px solid $mercury;
+
+    &-form {
+      &__container {
+        width: 100%;
+
+        &-subdiv {
+          width: calc(100% - 96px);
+        }
+      }
+    }
+  }
+}
