@@ -26,3 +26,10 @@ const app = express();
 
 //SideVideo API
 app.use("/api/sidevideos", require("./routes/api/sidevideo"));
+
+app.use("/api/mainvideos", require("./routes/api/mainvideo"));
+
+//Setting up the listening function for the Server.
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
