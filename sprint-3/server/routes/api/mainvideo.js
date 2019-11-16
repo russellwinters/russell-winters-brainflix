@@ -20,12 +20,16 @@ router.get("/:id", (req, res) => {
   }
 });
 
-// router.post("/", (req, res) => {
-//   const newUpload = {
-//     id: helper.giveID,
-//     title: req.body.title,
-//     description: req.body.description
-//   };
-//   console.log(newUpload);
-// });
+router.post("/", (req, res) => {
+  console.log(videocontent);
+  const newUpload = new Object();
+  newUpload["id"] = helper.giveID();
+  newUpload["title"] = req.body.title;
+  newUpload["description"] = req.body.description;
+
+  let upload = videocontent.concat(newUpload);
+  helper.syncJSONFile(mainvideos, upload);
+  console.log(upload);
+  res.json({ Message: "Complete" });
+});
 module.exports = router;

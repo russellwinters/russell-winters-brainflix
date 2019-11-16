@@ -1,5 +1,5 @@
 const fs = require("fs");
-const uuid = require("express");
+const uuid = require("uuid/v4");
 
 //Function to give ID to new comment
 function giveID() {
