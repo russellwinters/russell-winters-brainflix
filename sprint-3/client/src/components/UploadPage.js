@@ -11,7 +11,8 @@ export default class UploadPage extends Component {
             <div className="form-flex__thumbnail">
               <h3 className="form-heading">Video Thumbnail</h3>
               <div className="form-flex__thumbnail--img-container">
-                <img
+                <input
+                  type="image"
                   src={videoClip}
                   alt="Video Thumbnail"
                   className="form-flex__thumbnail--img-container-content"

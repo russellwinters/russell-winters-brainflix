@@ -6,11 +6,6 @@ import Aside from "./Aside";
 import axios from "axios";
 import loading from "../assets/images/loading.jpg";
 
-// const axiosRegister = axios
-//   .get("https://project-2-api.herokuapp.com/register")
-//   .then(response => {
-//     console.log(response.data);
-//   });
 const projectKey = "4d27b0a1-1ba3-4823-a43c-632131c75720";
 
 export default class PostComponent extends Component {
@@ -27,24 +22,19 @@ export default class PostComponent extends Component {
     let videoQueue;
     let mainPost;
     console.log("I am inside componentDidMount()");
-    axios
-      .get("https://project-2-api.herokuapp.com/videos?api_key=" + projectKey)
-      .then(response => {
-        videoQueue = response.data;
-        axios
-          .get(
-            "https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=" +
-              projectKey
-          )
-          .then(response => {
-            mainPost = response.data;
-            this.setState({
-              MainPost: mainPost,
-              VideoQueue: videoQueue,
-              PostID: response.data.id
-            });
+    axios.get("http://localhost:5000/api/sidevideos/").then(response => {
+      videoQueue = response.data;
+      axios
+        .get("http://localhost:5000/api/mainvideos/1af0jruup5gu")
+        .then(response => {
+          mainPost = response.data[0];
+          this.setState({
+            MainPost: mainPost,
+            VideoQueue: videoQueue,
+            PostID: response.data.id
           });
-      });
+        });
+    });
   }
 
   render() {
