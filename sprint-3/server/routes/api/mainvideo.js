@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const mainvideos = __dirname + "/../../model/mainvideo.json";
 const videocontent = require(mainvideos);
+const sidevideos = __dirname + "/../../model/sidevideo.json";
+const sidevideocontent = require(sidevideos);
 const helperFile = "../../helper/helper.js";
 const helper = require(helperFile);
 
@@ -26,9 +28,13 @@ router.post("/", (req, res) => {
   newUpload["id"] = helper.giveID();
   newUpload["title"] = req.body.title;
   newUpload["description"] = req.body.description;
-
+  newUpload["image"] = req.body.image;
+  //sync post to main videos
   let upload = videocontent.concat(newUpload);
   helper.syncJSONFile(mainvideos, upload);
+  //sync post to side videos
+  let sidevideoupload = sidevideocontent.concat(newUpload);
+  helper.syncJSONFile(sidevideos, sidevideoupload);
   console.log(upload);
   res.json({ Message: "Complete" });
 });
