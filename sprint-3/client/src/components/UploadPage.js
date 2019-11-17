@@ -8,14 +8,15 @@ export default class UploadPage extends Component {
     //axios to post page data
     console.log(event.target.title.value);
     console.log(event.target.description.value);
+    console.log("../assets/images/Upload-video-preview.jpg");
     let newUpload = {
       title: event.target.title.value,
       description: event.target.description.value,
-      image: videoClip
+      image: "../assets/images/Upload-video-preview.jpg"
     };
 
     axios
-      .post("localhost:5000/api/mainvideos", newUpload)
+      .post("http://localhost:5000/api/mainvideos", newUpload)
       .then(console.log("Success"));
   };
 

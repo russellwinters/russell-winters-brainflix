@@ -25,7 +25,10 @@ router.get("/:id", (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/", CORS({ "Access-Control-Allow-Origin": "*" }), function(
+  req,
+  res
+) {
   console.log(req);
   const newUpload = new Object();
   newUpload["id"] = helper.giveID();

@@ -58,5 +58,11 @@
     "title": "New Video",
     "description": "this is a new video",
     "image": "www.thisimage.com"
+  },
+  {
+    "id": "cf8f8226-b34d-4690-b7f7-5b7156b80725",
+    "title": "title",
+    "description": "description",
+    "image": "../assets/images/Upload-video-preview.jpg"
   }
 ]
