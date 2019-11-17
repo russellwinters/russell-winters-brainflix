@@ -6,6 +6,9 @@ const sidevideos = __dirname + "/../../model/sidevideo.json";
 const sidevideocontent = require(sidevideos);
 const helperFile = "../../helper/helper.js";
 const helper = require(helperFile);
+const CORS = require("cors");
+
+router.use(CORS());
 
 router.get("/:id", (req, res) => {
   console.log(req.params.id);
@@ -23,7 +26,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(videocontent);
+  console.log(req);
   const newUpload = new Object();
   newUpload["id"] = helper.giveID();
   newUpload["title"] = req.body.title;

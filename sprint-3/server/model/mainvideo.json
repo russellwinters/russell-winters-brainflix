@@ -314,19 +314,8 @@
       }
     ]
   },
-  { "title": "New Video", "description": "this is a new video" },
   {
-    "id": "140bdf0b-86e0-4624-b684-9deefe282762",
-    "title": "New Video",
-    "description": "this is a new video"
-  },
-  {
-    "id": "7c2e9de3-4b91-459a-8c05-b3a2e93351fe",
-    "title": "New Video",
-    "description": "this is a new video"
-  },
-  {
-    "id": "3589440d-edaa-4fde-b6d4-70b1a3eee824",
+    "id": "c36e49b7-97a3-4695-be2f-eca0b27e9422",
     "title": "New Video",
     "description": "this is a new video",
     "image": "www.thisimage.com"

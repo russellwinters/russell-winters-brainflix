@@ -1,18 +1,41 @@
 import React, { Component } from "react";
+import axios from "axios";
 import videoClip from "../assets/images/Upload-video-preview.jpg";
 
 export default class UploadPage extends Component {
+  uploadVideo = event => {
+    event.preventDefault();
+    //axios to post page data
+    console.log(event.target.title.value);
+    console.log(event.target.description.value);
+    let newUpload = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+      image: videoClip
+    };
+
+    axios
+      .post("localhost:5000/api/mainvideos", newUpload)
+      .then(console.log("Success"));
+  };
+
   render() {
     return (
       <>
         <h1 className="upload-title">Upload Video</h1>
-        <form className="form">
+        <form
+          className="form"
+          action="localhost:5000/api/mainvideos"
+          method="POST"
+          onSubmit={this.uploadVideo}
+        >
           <div className="form-flex">
             <div className="form-flex__thumbnail">
               <h3 className="form-heading">Video Thumbnail</h3>
               <div className="form-flex__thumbnail--img-container">
                 <input
                   type="image"
+                  name="image"
                   src={videoClip}
                   alt="Video Thumbnail"
                   className="form-flex__thumbnail--img-container-content"
@@ -24,7 +47,7 @@ export default class UploadPage extends Component {
                 <h3 className="form-heading">Title Your Video</h3>
                 <input
                   type="text"
-                  name="video-title"
+                  name="title"
                   className="form-flex-content__title-input--content"
                   placeholder="Add a title to your video"
                 ></input>
@@ -34,7 +57,7 @@ export default class UploadPage extends Component {
                 <textarea
                   type="text"
                   className="form-flex-content__description-input--content"
-                  name="video-description"
+                  name="description"
                   placeholder="Add a description of your Video"
                 ></textarea>
               </div>
