@@ -53,16 +53,12 @@
     "channel": "Scotty Cranmer",
     "image": "https://i.imgur.com/i6S8m7I.jpg"
   },
+
   {
-    "id": "c36e49b7-97a3-4695-be2f-eca0b27e9422",
-    "title": "New Video",
-    "description": "this is a new video",
-    "image": "www.thisimage.com"
-  },
-  {
-    "id": "cf8f8226-b34d-4690-b7f7-5b7156b80725",
-    "title": "title",
-    "description": "description",
-    "image": "../assets/images/Upload-video-preview.jpg"
+    "id": "2bdd9b9f-7f27-4809-8e3f-4899798811a0",
+    "title": "new title",
+    "description": "new description\n",
+    "image": "../assets/images/Upload-video-preview.jpg",
+    "channel": "Anonymous User"
   }
 ]

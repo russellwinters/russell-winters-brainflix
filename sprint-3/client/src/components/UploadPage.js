@@ -9,10 +9,12 @@ export default class UploadPage extends Component {
     console.log(event.target.title.value);
     console.log(event.target.description.value);
     console.log("../assets/images/Upload-video-preview.jpg");
+    //Adding a fake channel so that it will display effectively on the video queue
     let newUpload = {
       title: event.target.title.value,
       description: event.target.description.value,
-      image: "../assets/images/Upload-video-preview.jpg"
+      image: "../assets/images/Upload-video-preview.jpg",
+      channel: "Anonymous User"
     };
 
     axios

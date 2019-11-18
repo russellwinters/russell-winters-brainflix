@@ -7,6 +7,7 @@ function giveID() {
 }
 
 //Function to sync JSON File
+//It actually writes a new file to the filename, so I use a concat method to add to json array before I use.
 function syncJSONFile(filename, content) {
   fs.writeFileSync(filename, JSON.stringify(content), "utf-8", err => {
     if (err) {
